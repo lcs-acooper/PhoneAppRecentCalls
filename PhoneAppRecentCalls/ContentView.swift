@@ -9,16 +9,71 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack {
+                Image(systemName: "plus")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                    .bold()
+                Spacer()
+                Text("Favorites")
+                    .bold()
+                Spacer()
+                Text("Edit")
+                    .foregroundColor(.blue)
+                    .bold()
+            }
+            .padding()
         }
-        .padding()
+            Spacer()
+        
     }
 }
 
 #Preview {
-    ContentView()
+    TabView(selection: Binding.constant(1)) {
+        
+        
+        ContentView()
+            .tabItem {
+                Image(systemName: "star.fill")
+                Text("Favorites")
+            }
+            .tag(1)
+        
+        Text("Recents")
+            .tabItem {
+                Image(systemName: "clock.fill")
+                Text("Recents")
+            }
+            .tag(2)
+        Text("Contacts")
+            .tabItem {
+                Image(systemName: "person.crop.circle")
+                Text("Contacts")
+            }
+            .tag(3)
+        Text("KeyPad")
+            .tabItem {
+                Image(systemName: "circle.grid.3x3.fill")
+                Text("Keypad")
+            }
+            .tag(4)
+        Text("Voicemail")
+            .tabItem {
+                Image(systemName: "recordingtape")
+                Text("Voicemail")
+            }
+            .tag(5)
+        
+    }
+    
+    //Accent changed
+    .accentColor(.blue)
+    //Prefered Colour Scheme
+    .preferredColorScheme(.light)
 }
+
+
+
