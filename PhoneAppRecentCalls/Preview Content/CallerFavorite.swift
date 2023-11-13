@@ -10,24 +10,44 @@ import SwiftUI
 struct CallerFavorite: View {
     
     let Name: String
-
+    let Device: String
     
     var body: some View {
         HStack {
             //Image
             Image("Person")
-            VStack {
+                .resizable()
+                .frame(width: 50, height: 50)
+                .cornerRadius(50)
+            VStack(alignment: .leading) {
                 //Name
                 Text(Name)
+                    .bold()
+                    .font(.title2)
+                
                 //Mobile
-                Text("Mobile")
+                HStack {
+                    Image(systemName: "phone.fill")
+                    
+                    Text(Device)
+                    
+                }
+                
+                
             }
+            Spacer()
             //SF Symbol of information
-            Image("info.circle")
+            Image(systemName: "info.circle")
+                .foregroundStyle(.tint)
+                .bold()
+                .imageScale(.large)
+                .padding()
         }
+        .padding()
     }
 }
 
 #Preview {
-    CallerFavorite(Name: "Jenn")
+    CallerFavorite(Name: "Jenn", Device: "Mobile")
 }
+
