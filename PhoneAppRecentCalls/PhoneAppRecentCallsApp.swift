@@ -26,7 +26,7 @@ struct StopWatchReproductionApp: App {
                         Text("Recents")
                     }
                     .tag(2)
-               Text("Contacts")
+                Text("Contacts")
                     .tabItem {
                         Image(systemName: "person.crop.circle")
                         Text("Contacts")
@@ -43,6 +43,8 @@ struct StopWatchReproductionApp: App {
                         Image(systemName: "recordingtape")
                         Text("Voicemail")
                     }
+                    .tag(5)
+                
                 
                 
             }

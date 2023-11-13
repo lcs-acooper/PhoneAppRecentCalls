@@ -25,8 +25,14 @@ struct ContentView: View {
                     .bold()
             }
             .padding()
-        }
+            //Moved spacer (Thanks Mr Gordon)
+            //Added Rectangles to seperate the boxes
+            Rectangle()
+                .frame(height: 1)
             Spacer()
+            Rectangle()
+                .frame(height: 1)
+        }
         
     }
 }
