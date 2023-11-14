@@ -29,7 +29,10 @@ struct ContentView: View {
             //Added Rectangles to seperate the boxes
             Rectangle()
                 .frame(height: 1)
-            Spacer()
+            CallerFavorite(Name: "Jenn", Device: "Mobile")
+            CallerFavorite(Name: "Jenn", Device: "Mobile")
+           Spacer()
+            
             Rectangle()
                 .frame(height: 1)
         }

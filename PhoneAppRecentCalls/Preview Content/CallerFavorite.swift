@@ -28,23 +28,29 @@ struct CallerFavorite: View {
                 //Mobile
                 HStack {
                     Image(systemName: "phone.fill")
-                    
+                        .foregroundStyle(.gray)
                     Text(Device)
-                    
+                        .foregroundStyle(.gray)
                 }
                 
                 
             }
-            Spacer()
+            
             //SF Symbol of information
             Image(systemName: "info.circle")
                 .foregroundStyle(.tint)
                 .bold()
                 .imageScale(.large)
                 .padding()
+            
         }
+        .frame(height: 25)
         .padding()
+        Rectangle()
+            .frame(width: 250, height: 1)
+            .foregroundStyle(.gray)
     }
+    
 }
 
 #Preview {
