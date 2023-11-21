@@ -28,12 +28,19 @@ struct ContentView: View {
             //Moved spacer (Thanks Mr Gordon)
             //Added Rectangles to seperate the boxes
             Rectangle()
+                .foregroundColor(.gray)
                 .frame(height: 1)
-            CallerFavorite(Name: "Jenn", Device: "Mobile")
-            CallerFavorite(Name: "Jenn", Device: "Mobile")
-           Spacer()
-            
+            List {
+                
+                CallerFavorite(Name: "Jenn", Device: "Mobile")
+                CallerFavorite(Name: "Jenn", Device: "Mobile")
+            }
+            //Type of list
+            .listStyle(.plain)
+            .border(.red, width: 4)
+         
             Rectangle()
+                .foregroundColor(.gray)
                 .frame(height: 1)
         }
         

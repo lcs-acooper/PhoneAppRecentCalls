@@ -35,6 +35,7 @@ struct CallerFavorite: View {
                 
                 
             }
+            Spacer()
             
             //SF Symbol of information
             Image(systemName: "info.circle")
@@ -46,10 +47,12 @@ struct CallerFavorite: View {
         }
         .frame(height: 25)
         .padding()
-        Rectangle()
-            .frame(width: 250, height: 1)
-            .foregroundStyle(.gray)
+        
+        .border(.red, width: 4)
+      
     }
+    
+    
     
 }
 
