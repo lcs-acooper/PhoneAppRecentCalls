@@ -37,6 +37,7 @@ struct ContentView: View {
             }
             //Type of list
             .listStyle(.plain)
+            
             .border(.red, width: 4)
          
             Rectangle()
